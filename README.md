@@ -53,6 +53,10 @@ As an example, we supply pyramid data for the United States and calculate an IFR
 IFR on target country assuming disease prevalence equal among ages:  0.721%
 ```
 
+However IFR is highly dependent on factors other than age: availability
+of healthcare, population health, etc, so this estimate should be interpreted
+with caution.
+
 [sero]: https://www.mscbs.gob.es/gabinetePrensa/notaPrensa/pdf/13.05130520204528614.pdf
 [deaths]: https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/documentos/Actualizacion_102_COVID-19.pdf
 [wpop]: https://worldpopulationreview.com/countries/spain-population/

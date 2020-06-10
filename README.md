@@ -44,9 +44,9 @@ has made significant corrections to deaths statistics on 25 May by subtracting
 approximately 2 000 deaths. Therefore we trusted the statistics from 29 May over
 those of 18 May.
 
-Important detail to note: there were 26 744 total deaths, however age information
-was only available for 18 722 deaths, and was missing for 8 022 deaths.
-We assume that these 8 022 deaths were distributed proportionally—not equally—among age
+Important detail to note: there were 27 121 total deaths, however age information
+was only available for 20 585 deaths, and was missing for 6 536 deaths.
+We assume that these 6 536 deaths were distributed proportionally—not equally—among age
 brackets, which seems to be a reasonable assumption.
 
 # Applying the age-stratified IFR to other countries

@@ -32,7 +32,7 @@ remains the largest published study available to this day. The age-stratified
 IFR was calculated from three sources:
 
 1. Detailed *prevalence data for age brackets*, from the [serosurvey][sero] (page 8)
-1. *Deaths per age brackets* from the [Ministry of Health's daily report for 11 May][deaths] (page 1 and table 3)
+1. *Total deaths* and *deaths per age bracket* from the [Ministry of Health's daily report for 11 May][deaths] (page 1 and table 3)
 1. *Population pyramid* for Spain, from [worldpopulationreview.com][wpop]
 
 Important detail to note: there were 26 744 total deaths, however age information

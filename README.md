@@ -50,6 +50,8 @@ In the second half of the script, edit `pyramid_target` with the demographics da
 As an example, we supply pyramid data for the United States and calculate an IFR of **0.721%**:
 
 ```
+$ ./calc_ifr.py
+[...]
 IFR on target country assuming disease prevalence equal among ages:  0.721%
 ```
 

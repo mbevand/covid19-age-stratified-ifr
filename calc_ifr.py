@@ -1,57 +1,56 @@
 #!/usr/bin/python3
 #
-# Calculate the age-stratified IFR based on the Spanish serosurvey of 60897 participants.
+# Calculate the age-stratified IFR based on the second round of the Spanish
+# serosurvey of 63564 participants.
 # Author: Marc Bevand — @zorinaq
 
-# Prevalence of antibodies by age bracket, in % (serosurvey dates: 27-April-2020 to 11-May-2020)
-# Source: https://www.mscbs.gob.es/gabinetePrensa/notaPrensa/pdf/13.05130520204528614.pdf (page 8)
+# Prevalence of antibodies by age bracket, in % (serosurvey dates: 18-May-2020 to 01-June-2020)
+# Source: https://portalcne.isciii.es/enecovid19/ene_covid19_inf_pre2.pdf (table 1)
 prevalence_by_age = {
-        (0,0): 1.1,
-        (1,4): 2.2,
-        (5,9): 3.0,
-        (10,14): 3.9,
+        (0,0): 2.2,
+        (1,4): 2.4,
+        (5,9): 2.9,
+        (10,14): 3.8,
         (15,19): 3.8,
-        (20,24): 4.5,
-        (25,29): 4.8,
-        (30,34): 3.8,
-        (35,39): 4.6,
-        (40,44): 5.3,
-        (45,49): 5.7,
-        (50,54): 5.8,
-        (55,59): 6.1,
-        (60,64): 5.9,
-        (65,69): 6.2,
-        (70,74): 6.9,
-        (75,79): 6.1,
+        (20,24): 4.2,
+        (25,29): 4.9,
+        (30,34): 4.4,
+        (35,39): 4.7,
+        (40,44): 5.4,
+        (45,49): 5.9,
+        (50,54): 6.1,
+        (55,59): 5.7,
+        (60,64): 6.3,
+        (65,69): 6.6,
+        (70,74): 7.3,
+        (75,79): 6.4,
         (80,84): 5.1,
-        (85,89): 5.6,
-        (90,199): 5.8,
+        (85,89): 6.4,
+        (90,199): 8.0,
         }
 
-# Total deaths, and number of deaths by age bracket (as of 11-May-2020)
-# Source: https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/documentos/Actualizacion_102_COVID-19.pdf (page 1 and table 3)
-# Total deaths (26744) differs from the total for all age brackets (18722)
-# because age information is not available for 8022 deaths, as explained in
-# table 3 header: «Distribución de casos hospitalizados, ingresados en UCI y
-# fallecidos por grupos de edad y sexo información disponible»
-total_deaths = 26744
+# Total deaths, and number of deaths by age bracket (as of 29-May-2020)
+# Source: https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/documentos/Actualizacion_120_COVID-19.pdf (table 2 and table 3)
+# Total deaths (27121) differs from the total for all age brackets (20585)
+# because age information is not available for 6536 deaths
+total_deaths = 27121
 deaths_by_age = {
-        (0,9): 2,
+        (0,9): 3,
         (10,19): 5,
-        (20,29): 23,
-        (30,39): 61,
-        (40,49): 197,
-        (50,59): 605,
-        (60,69): 1654,
-        (70,79): 4529,
-        (80,89): 7688,
-        (90,199): 3958,
+        (20,29): 24,
+        (30,39): 65,
+        (40,49): 218,
+        (50,59): 663,
+        (60,69): 1825,
+        (70,79): 4896,
+        (80,89): 8463,
+        (90,199): 4423,
         }
-deaths_by_age[(0,199)] = total_brackets = sum(deaths_by_age.values()) # 18722
+deaths_by_age[(0,199)] = total_brackets = sum(deaths_by_age.values()) # 20585
 
-# To properly calculate the IFR, we need to account for the extra 8022 deaths
+# To properly calculate the IFR, we need to account for the extra 6536 deaths
 # for which age information was not available, so we simply assume they are
-# distributed proportionally among age brackets
+# distributed proportionally (not equally) among age brackets
 for bracket in deaths_by_age:
     deaths_by_age[bracket] *= (total_deaths / total_brackets)
 

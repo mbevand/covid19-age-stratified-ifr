@@ -37,7 +37,7 @@ IFR was calculated from three sources:
 
 Important detail to note: there were 26 744 total deaths, however age information
 was only available for 18 722 deaths, and was missing for 8 022 deaths.
-We assume that these 8 022 deaths were distributed proportionally—not linearly—among age
+We assume that these 8 022 deaths were distributed proportionally—not equally—among age
 brackets, which seems to be a reasonable assumption.
 
 # Applying the age-stratified IFR to other countries

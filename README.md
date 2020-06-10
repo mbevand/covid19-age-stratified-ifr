@@ -64,9 +64,9 @@ $ ./calc_ifr.py
 IFR on target country assuming disease prevalence equal among ages:  0.658%
 ```
 
-However IFR is highly dependent on factors other than age: availability
-of healthcare, population health, etc, so this estimate should be interpreted
-with caution.
+However the average IFR is highly dependent on factors other than age:
+varying prevalence among age brackets, availability of healthcare, population
+health, etc, so this estimate should be interpreted with caution.
 
 [sero]: https://portalcne.isciii.es/enecovid19/ene_covid19_inf_pre2.pdf
 [daily]: https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/documentos/Actualizacion_120_COVID-19.pdf

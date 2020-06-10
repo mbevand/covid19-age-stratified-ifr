@@ -39,7 +39,7 @@ In order to minimize right-censoring, the parameters *total deaths* and *deaths
 per age bracket* should be obtained from a point in time as close as possible
 to when the serosurvey was conducted (18 May to 01 June.) We found only two
 Ministry of Health reports in this time period that document deaths per age
-brackets: [18 May][dailyalt], [29 May][daily]. However the Ministry of Health
+bracket: [18 May][dailyalt], [29 May][daily]. However the Ministry of Health
 has made significant corrections to deaths statistics on 25 May by subtracting
 approximately 2 000 deaths. Therefore we trusted the statistics from 29 May over
 those of 18 May.

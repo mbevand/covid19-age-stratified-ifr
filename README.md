@@ -35,14 +35,17 @@ this day. The age-stratified IFR was calculated from three sources:
 1. *Total deaths* and *deaths per age bracket* from the [Ministry of Health's daily report for 29 May][daily] (table 2 and table 3)
 1. *Population pyramid* for Spain, from [worldpopulationreview.com][wpop]
 
-In order to minimize right-censoring, the parameters *total deaths* and *deaths
-per age bracket* should be obtained from a point in time as close as possible
-to when the serosurvey was conducted (18 May to 01 June.) We found only two
-Ministry of Health reports in this time period that document deaths per age
-bracket: [18 May][dailyalt], [29 May][daily]. However the Ministry of Health
-has made significant corrections to deaths statistics on 25 May by subtracting
-approximately 2 000 deaths. Therefore we trusted the statistics from 29 May over
-those of 18 May.
+In order to minimize right-censoring (deaths lagging infections,) the
+parameters *total deaths* and *deaths per age bracket* should be obtained from
+a point in time as close as possible to when the serosurvey was conducted (18
+May to 01 June, preferably closer to the mid-point 25 May.) This is because the
+seroconversion time is roughly the same as the time between infection and
+death. We found only two Ministry of Health reports in this time period that
+document deaths per age bracket: [18 May][dailyalt], [29 May][daily]. However
+the Ministry of Health has made significant corrections to deaths statistics on
+25 May by subtracting approximately 2 000 deaths. Therefore we trusted the
+statistics from 29 May over those of 18 May. Furthermore, 29 May is closer to
+the mid-point.
 
 Important detail to note: there were 27 121 total deaths, however age information
 was only available for 20 585 deaths, and was missing for 6 536 deaths.

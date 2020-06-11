@@ -26,7 +26,8 @@ Ages  0 to 199: 2428102 infected, 27121 deaths,  1.117% IFR
 ```
 
 The average IFR for Spain is **1.117%**. However the true IFR may be higher due
-to right-censoring and under-reporting of deaths.
+to right-censoring, under-reporting of deaths, or low specificity of the serological test;
+or the true IFR may be lower due to low sensitivity of the serological test.
 
 The Spanish serological study remains the largest published study available to
 this day. The age-stratified IFR was calculated from three sources:
@@ -52,6 +53,24 @@ was only available for 20 585 deaths, and was missing for 6 536 deaths.
 We assume that these 6 536 deaths were distributed proportionally—not equally—among age
 brackets, which seems to be a reasonable assumption.
 
+Regarding the specificity of the commercial test used (COVID-19 IgG Rapid Test
+Cassette by Zhejiang Orient Gene Biotech Co Ltd) we found various claims, all
+100% or close, so no significant false positives are expected:
+
+* 100% claimed by the manufacturer ([serosurvey][sero], page 3)
+* 100% measured by the Ministry of Health ([serosurvey][sero], page 3)
+* 99.2% measured by a [third-party][hoffman]
+
+However the sensitivity is more uncertain:
+
+* 97% claimed by the manufacturer ([serosurvey][sero], page 3)
+* 79% measured by the Ministry of Health ([serosurvey][sero], page 3)
+* 93.1% measured by a [third-party][hoffman]
+
+So a false negative rate anywhere from 3% to 21% could be possible, and we
+think it is premature to adjust IFR calculations given the exact sensitivity is
+not known.
+
 # Applying the age-stratified IFR to other countries
 
 The script `calc_ifr.py` is also able to apply the age-stratified IFR to
@@ -75,3 +94,4 @@ health, etc, so this estimate should be interpreted with caution.
 [daily]: https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/documentos/Actualizacion_120_COVID-19.pdf
 [dailyalt]: https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/documentos/Actualizacion_109_COVID-19.pdf
 [wpop]: https://worldpopulationreview.com/countries/spain-population/
+[hoffman]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7178815/

@@ -1,6 +1,6 @@
 # Calculating the age-stratified infection fatality ratio (IFR) of COVID-19
 
-*Updated: 10 June 2020*
+*Updated: 02 Sep 2020*
 
 Author: Marc Bevand
 

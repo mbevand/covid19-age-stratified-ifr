@@ -91,7 +91,7 @@ prevalence among age brackets, underlying health conditions, access to
 healthcare, socioeconomic status, ethnicity, etc, so this estimate should be
 interpreted with caution.
 
-[sero]: https://portalcne.isciii.es/enecovid19/ene_covid19_inf_pre2.pdf
+[sero]: https://www.mscbs.gob.es/ciudadanos/ene-covid/docs/ESTUDIO_ENE-COVID19_SEGUNDA_RONDA_INFORME_PRELIMINAR.pdf
 [daily]: https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/documentos/Actualizacion_120_COVID-19.pdf
 [dailyalt]: https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/documentos/Actualizacion_109_COVID-19.pdf
 [wpop]: https://worldpopulationreview.com/countries/spain-population/

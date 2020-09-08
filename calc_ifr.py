@@ -90,6 +90,18 @@ for (bracket, deaths) in deaths_by_age.items():
         ifrs[bracket] = ifr
 print('True IFR may be higher due to right-censoring and under-reporting of deaths')
 
+# unused, test code
+ifrs_test = {
+        (0,9): 0.01,
+        (10,19): 0.00,
+        (20,29): 0.01,
+        (30,39): 0.03,
+        (40,49): 0.11,
+        (50,59): 0.22,
+        (60,69): 0.71,
+        (70,199): 2.40,
+        }
+
 # Now we apply the age-stratified IFR to a target country with a different
 # population pyramid.
 pyramid_usa = [

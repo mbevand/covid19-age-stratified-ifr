@@ -90,17 +90,15 @@ for (bracket, deaths) in deaths_by_age.items():
         ifrs[bracket] = ifr
 print('True IFR may be higher due to right-censoring and under-reporting of deaths')
 
-# unused, test code
-ifrs_test = {
-        (0,9): 0.01,
-        (10,19): 0.00,
-        (20,29): 0.01,
-        (30,39): 0.03,
-        (40,49): 0.11,
-        (50,59): 0.22,
-        (60,69): 0.71,
-        (70,199): 2.40,
+# IFRs estimated by the US CDC as of 10 Sep 2020
+# https://www.cdc.gov/coronavirus/2019-ncov/hcp/planning-scenarios.html
+ifrs_cdc = {
+        (0,19): 0.00003 * 100,
+        (20,49): 0.0002 * 100,
+        (50,69): 0.005 * 100,
+        (70,199): 0.054 * 100,
         }
+#ifrs = ifrs_cdc
 
 # Now we apply the age-stratified IFR to a target country with a different
 # population pyramid.

@@ -11,8 +11,14 @@ This repository contains code to:
 
 The script [apply_ifr.py](apply_ifr.py) uses a handful of age-stratified
 IFR estimates and applies them to countries' population pyramids, to
-find their overall IFR assuming equal prevalence of the disease among all
-age groups. IFR estimates come from:
+find their expected overall IFR assuming equal prevalence of the disease among all
+age groups.
+
+Of course, the real-world overall IFR will dependent on many factors: varying
+prevalence among age groups, underlying health conditions, access to
+healthcare, socioeconomic status, ethnicity, etc.
+
+IFR estimates come from:
 
 1. ENE-COVID Spanish serosurvey (calculated by `calc_ifr.py`, see next section)
 1. [US CDC](https://www.cdc.gov/coronavirus/2019-ncov/hcp/planning-scenarios.html) (table 1)

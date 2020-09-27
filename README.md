@@ -1,8 +1,8 @@
-# Calculating the age-stratified infection fatality ratio (IFR) of COVID-19
-
-*Updated: 02 Sep 2020*
+*Updated: 27 Sep 2020*
 
 Author: Marc Bevand
+
+# Calculating the age-stratified infection fatality ratio (IFR) of COVID-19
 
 The largest serological prevalence survey of COVID-19 was conducted by Spain
 during the second round of a study that analyzed 63 564 samples between 18 May
@@ -70,26 +70,6 @@ However the sensitivity is more uncertain:
 So a false negative rate anywhere from 3% to 21% could be possible, and we
 think it is premature to adjust IFR calculations given the exact sensitivity is
 not known.
-
-# Applying the age-stratified IFR to other countries
-
-The script `calc_ifr.py` is also able to apply the age-stratified IFR to
-another population pyramid, thus calculating the expected average IFR for other
-countries.
-
-In the second half of the script, edit `pyramid_target` with the demographics data.
-As an example, we supply pyramid data for the United States and calculate an IFR of **0.658%**:
-
-```
-$ ./calc_ifr.py
-[...]
-IFR on target country assuming disease prevalence equal among ages:  0.658%
-```
-
-However the average IFR is highly dependent on factors other than age: varying
-prevalence among age brackets, underlying health conditions, access to
-healthcare, socioeconomic status, ethnicity, etc, so this estimate should be
-interpreted with caution.
 
 [sero]: https://www.mscbs.gob.es/ciudadanos/ene-covid/docs/ESTUDIO_ENE-COVID19_SEGUNDA_RONDA_INFORME_PRELIMINAR.pdf
 [daily]: https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/documentos/Actualizacion_120_COVID-19.pdf

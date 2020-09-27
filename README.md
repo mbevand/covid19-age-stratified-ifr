@@ -266,8 +266,18 @@ The **overall IFR varies dramatically by more than 10-fold** between countries w
 population and those with an old population.
 
 In fact, **the young age of the population in Africa is a major factor explaining the
-relatively small number of deaths** on this continent. We find IFR=0.127% for Africa,
-and IFR=0.810% in Europe, a 6-fold difference.
+relatively small number of deaths** on this continent. We find (ENE-COVID)
+IFR=0.127% for Africa, and IFR=0.810% in Europe, a 6-fold difference.
+
+The overall IFR is, for each world region and the world:
+
+* 0.810% Europe
+* 0.675% Northern America
+* 0.518% Oceania
+* 0.356% Latin America and the Caribbean
+* 0.325% Asia
+* 0.127% Africa
+* **0.358% World**
 
 Our code, with the ENE-COVID Spanish serosurvey data from June 2020, accurately
 predicted an overall IFR of 0.669% in the United States, which is very close to

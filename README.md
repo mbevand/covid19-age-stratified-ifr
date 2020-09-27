@@ -21,7 +21,7 @@ healthcare, socioeconomic status, ethnicity, etc.
 IFR estimates come from:
 
 1. ENE-COVID Spanish serosurvey (calculated by `calc_ifr.py`, see next section)
-1. [US CDC](https://www.cdc.gov/coronavirus/2019-ncov/hcp/planning-scenarios.html) (table 1)
+1. [US CDC](https://web.archive.org/web/20200911222029/https://www.cdc.gov/coronavirus/2019-ncov/hcp/planning-scenarios.html) (table 1)
 1. [Verity et al.: Estimates of the severity of coronavirus disease 2019: a model-based analysis](https://www.thelancet.com/journals/laninf/article/PIIS1473-3099%2820%2930243-7/fulltext) (table 1)
 1. [Levin et al.: Assessing the age specificity of infection fatality rates for COVID-19: systematic review, meta-analysis, and public policy implications](https://www.medrxiv.org/content/10.1101/2020.07.23.20160895v5) (table 3)
 1. [Gudbjartsson et al.: Humoral Immune Response to SARS-CoV-2 in Iceland](https://www.nejm.org/doi/full/10.1056/NEJMoa2026116),
@@ -253,7 +253,8 @@ Note that in addition to countries, there are rows for each continent and for th
 ## Findings
 
 The overall IFR estimates, with the exception of Levin et al., are relatively
-consistent with each other, usually within 30-40%.
+consistent with each other, usually within 30-40%. Levin et al. is up to
+2-fold higher than the others, depending on the country.
 
 The country with the oldest population is expected to have the highest overall
 IFR: Japan at 1.3-1.6% (excluding Levin et al.)
@@ -267,6 +268,11 @@ population and those with an old population.
 In fact, **the young age of the population in Africa is a major factor explaining the
 relatively small number of deaths** on this continent. We find IFR=0.127% for Africa,
 and IFR=0.810% in Europe, a 6-fold difference.
+
+Our code, with the ENE-COVID Spanish serosurvey data from June 2020, accurately
+predicted an overall IFR of 0.669% in the United States, which is very close to
+[overall US CDC estimate of 0.65%](https://web.archive.org/web/20200712055258/https://www.cdc.gov/coronavirus/2019-ncov/hcp/planning-scenarios.html)
+published in July 2020.
 
 # Calculating the age-stratified IFR of COVID-19 from the Spanish ENE-COVID study
 

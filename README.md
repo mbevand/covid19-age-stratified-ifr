@@ -34,7 +34,7 @@ specifically the first sheet of [Population by Age Groups - Both Sexes](https://
 
 ## Results
 
-The results are summarized in this table:
+The overall expected IFR percentages are summarized in this table:
 
 | ENE-COV | US_CDC | Verity | Levin | Iceland | Region |
 | ------- | ------ | ------ | ----- | ------- | ------ |
@@ -162,7 +162,7 @@ The results are summarized in this table:
 | 0.354  | 0.438 | 0.595 | 0.642 | 0.368 | Grenada |
 | 0.355  | 0.412 | 0.560 | 0.613 | 0.367 | Colombia |
 | 0.356  | 0.410 | 0.555 | 0.614 | 0.371 | Latin America and the Caribbean |
-| **0.358  | 0.418 | 0.566 | 0.615 | 0.370 | WORLD** |
+| **0.358**  | **0.418** | **0.566** | **0.615** | **0.370** | **WORLD** |
 | 0.359  | 0.399 | 0.540 | 0.623 | 0.380 | Panama |
 | 0.361  | 0.454 | 0.605 | 0.663 | 0.375 | Saint Vincent and the Grenadines |
 | 0.364  | 0.425 | 0.569 | 0.627 | 0.381 | Jamaica |
@@ -248,6 +248,8 @@ The results are summarized in this table:
 | 1.274  | 1.311 | 1.605 | 2.247 | 1.283 | Japan |
 | ------- | ------ | ------ | ----- | ------- | ------ |
 | ENE-COV | US_CDC | Verity | Levin | Iceland | Region |
+
+Note that in addition to countries, there are rows for each continent and for the world.
 
 ## Findings
 

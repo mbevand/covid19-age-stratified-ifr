@@ -2,10 +2,10 @@
 
 Author: Marc Bevand
 
-# Calculating the age-stratified infection fatality ratio (IFR) of COVID-19
+# Calculating the age-stratified infection fatality ratio (IFR) of COVID-19 from the Spanish ENE-COVID study
 
 The largest serological prevalence survey of COVID-19 was conducted by Spain
-during the second round of a study that analyzed 63 564 samples between 18 May
+during the second round of the ENE-COVID study that analyzed 63 564 samples between 18 May
 2020 and 01 June 2020. We used its [provisional results][sero] published on 03
 June to calculate the overall and age-stratified IFR of COVID-19 with the
 Python script `calc_ifr.py`:

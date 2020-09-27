@@ -78,12 +78,12 @@ ifrs = [
             (85,maxage): 22.3,
         }),
 
-        # Humoral Immune Response to SARS-CoV-2 in Iceland
+        # Gudbjartsson et al., Humoral Immune Response to SARS-CoV-2 in Iceland
         # https://www.nejm.org/doi/full/10.1056/NEJMoa2026116
         # Supplementary Appendix 1
         # https://www.nejm.org/doi/suppl/10.1056/NEJMoa2026116/suppl_file/nejmoa2026116_appendix_1.pdf
         # (table S7)
-        ('Iceland', {
+        ('Gudbj', {
             (0,70):   0.1,
             (71,80):  2.4,
             (81,maxage): 11.2,
@@ -154,7 +154,7 @@ def show_overall_ifrs(oifrs):
     # (<region_name>, <ifr_according_to_1st_estimate>, <ifr_according_to_2nd_estimate>, ...)
     # Sort by element index 1, that is by <ifr_according_to_1st_estimate>
     # To sort by region name, use index 0 (x[0])
-    oifrs.sort(key=lambda x: x[1])
+    oifrs.sort(key=lambda x: x[1], reverse=True)
     header()
     for region in oifrs:
         for i in region[1:]:

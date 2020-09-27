@@ -246,8 +246,6 @@ The overall expected IFR percentages are summarized in this table:
 | 1.041  | 1.043 | 1.339 | 1.806 | 1.057 | Greece |
 | 1.065  | 1.092 | 1.382 | 1.847 | 1.068 | Italy |
 | 1.274  | 1.311 | 1.605 | 2.247 | 1.283 | Japan |
-| ------- | ------ | ------ | ----- | ------- | ------ |
-| ENE-COV | US_CDC | Verity | Levin | Iceland | Region |
 
 Note that in addition to countries, there are rows for each continent and for the world.
 

@@ -89,6 +89,29 @@ ifrs = [
             (81,maxage): 11.2,
         }),
 
+        # O’Driscoll et al., Age-specific mortality and immunity patterns of SARS-CoV-2 infection in 45 countries
+        # https://www.medrxiv.org/content/10.1101/2020.08.24.20180851v1
+        # (table S4)
+        ("O'Drisc", {
+            (0,4):   0.002,
+            (5,9):   0.000,
+            (10,14): 0.000,
+            (15,19): 0.002,
+            (20,24): 0.004,
+            (25,29): 0.009,
+            (30,34): 0.017,
+            (35,39): 0.029,
+            (40,44): 0.053,
+            (45,49): 0.086,
+            (50,54): 0.154,
+            (55,59): 0.241,
+            (60,64): 0.359,
+            (65,69): 0.642,
+            (70,74): 1.076,
+            (75,79): 2.276,
+            (80,maxage): 7.274,
+        }),
+
 ]
 
 def ag2str(age_group):
@@ -148,8 +171,8 @@ def calc_overall_ifrs():
 def show_overall_ifrs(oifrs):
     def header():
         for i in ifrs:
-            print(f'{i[0]:>7} ', end='')
-        print('')
+            print(f'| {i[0]:>7} ', end='')
+        print('| Region |')
     # Each entry in the oifrs array is a tuple:
     # (<region_name>, <ifr_according_to_1st_estimate>, <ifr_according_to_2nd_estimate>, ...)
     # Sort by element index 1, that is by <ifr_according_to_1st_estimate>
@@ -158,8 +181,8 @@ def show_overall_ifrs(oifrs):
     header()
     for region in oifrs:
         for i in region[1:]:
-            print(f'{i:7.3f} ', end='')
-        print(f' {region[0]}')
+            print(f'| {i:7.3f} ', end='')
+        print(f'| {region[0]} |')
     header()
 
 def main():

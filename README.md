@@ -9,7 +9,7 @@ This project studies the age-stratified infection fatality ratio (IFR) of COVID-
 
 # Comparing COVID-19 to seasonal influenza
 
-![Infection Fatality Ratio of COVID-19 vs. Seasonal Influenza][covid_vs_flu.png]
+![Infection Fatality Ratio of COVID-19 vs. Seasonal Influenza](covid_vs_flu.png)
 
 The above chart compares the IFR of COVID-19 to the IFR of seasonal influenza. We
 find that COVID-19 is definitely significantly more fatal than seasonal influenza at all

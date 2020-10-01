@@ -262,9 +262,9 @@ ifrs_flu = [
 
 def col(is_covid, i):
     if is_covid:
-        return plt.cm.OrRd(255 - i * 8)
+        return plt.cm.bwr(255 - i * 7)
     else:
-        return plt.cm.Blues(255 - i * 30)
+        return plt.cm.bwr_r(255 - i * 20)
 
 def plot(ax, ifrs, is_covid):
     lstyles = ('solid', 'dashed', 'dashdot', 'dotted')

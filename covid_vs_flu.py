@@ -77,6 +77,15 @@ ifrs_covid = [
             (65,maxage): 5.6,
         }),
 
+        # Picon et al.
+        # https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7493765/
+        # (table 2)
+        ('Picon', {
+            (20,39):  0.08,
+            (40,59):  0.24,
+            (60,maxage):  4.63,
+        }),
+
         # Poletti et al.
         # https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2020.25.31.2001383
         # (table 1, column "Any time")
@@ -87,15 +96,6 @@ ifrs_covid = [
             (60,69):  1.42,
             (70,79):  6.87,
             (80,maxage):  18.35,
-        }),
-
-        # Picon et al.
-        # https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7493765/
-        # (table 2)
-        ('Picon', {
-            (20,39):  0.08,
-            (40,59):  0.24,
-            (60,maxage):  4.63,
         }),
 
         # Gudbjartsson et al.: Humoral Immune Response to SARS-CoV-2 in Iceland
@@ -267,7 +267,7 @@ def col(is_covid, i):
         return plt.cm.bwr_r(255 - i * 20)
 
 def plot(ax, ifrs, is_covid):
-    lstyles = ('solid', 'dashed', 'dashdot', 'dotted')
+    lstyles = ('solid', 'dashed', 'dotted', 'dashdot')
     markers = ('o', 's', 'v', '^', '<', '>', 'P', '*', 'X', 'D', 'p')
     i = 0
     for ifr in ifrs:

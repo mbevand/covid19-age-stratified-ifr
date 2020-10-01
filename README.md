@@ -1,32 +1,79 @@
-*Updated: 27 Sep 2020*
+*Updated: 30 Sep 2020*
 
 Author: Marc Bevand
 
-This repository contains code to:
-* apply estimates of the age-stratified infection fatality ratio (IFR) of
-  COVID-19 to countries' population pyramids, to find their expected overall IFR
-* calculate the age-stratified IFR from the Spanish ENE-COVID serosurvey
+This project studies the age-stratified infection fatality ratio (IFR) of COVID-19:
+* compare COVID-19 to seasonal influenza (flu)
+* calculate the expected overall IFR based on countries' population pyramids
+* calculate the age-stratified IFR of COVID-19 from the Spanish ENE-COVID serosurvey
+
+# Comparing COVID-19 to seasonal influenza
+
+![Infection Fatality Ratio of COVID-19 vs. Seasonal Influenza][covid_vs_flu.png]
+
+The above chart compares the IFR of COVID-19 to the IFR of seasonal influenza. We
+find that COVID-19 is definitely significantly more fatal than seasonal influenza at all
+ages above 30 years. The source code to create this chart is
+[covid_vs_flu.py](covid_vs_flu.py). The COVID-19 IFR curves represent various
+estimates:
+
+1. ENE-COVID Spanish serosurvey (calculated by `calc_ifr.py`, see next section)
+1. [US CDC](https://web.archive.org/web/20200911222029/https://www.cdc.gov/coronavirus/2019-ncov/hcp/planning-scenarios.html) (table 1)
+1. [Verity et al.: Estimates of the severity of coronavirus disease 2019: a model-based analysis](https://www.thelancet.com/journals/laninf/article/PIIS1473-3099%2820%2930243-7/fulltext) (table 1)
+1. [Levin et al.: Assessing the age specificity of infection fatality rates for COVID-19: systematic review, meta-analysis, and public policy implications](https://www.medrxiv.org/content/10.1101/2020.07.23.20160895v5) (table 3)
+1. [Perez-Saez et al.: Serology-informed estimates of SARS-CoV-2 infection fatality risk in Geneva, Switzerland](https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(20)30584-3/fulltext)
+1. [Poletti et al.: Age-specific SARS-CoV-2 infection fatality ratio and associated risk factors, Italy, February to April 2020](https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2020.25.31.2001383) (table 1, column "Any time")
+1. [Picon et al.: Coronavirus Disease 2019 Population-based Prevalence, Risk Factors, Hospitalization, and Fatality Rates in Southern Brazil](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7493765/) (table 2)
+1. [Gudbjartsson et al.: Humoral Immune Response to SARS-CoV-2 in Iceland](https://www.nejm.org/doi/full/10.1056/NEJMoa2026116),
+  specifically [Supplementary Appendix 1](https://www.nejm.org/doi/suppl/10.1056/NEJMoa2026116/suppl_file/nejmoa2026116_appendix_1.pdf) (table S7)
+1. [PHAS - Public Health Agency of Sweden: The infection fatality rate of COVID-19 in Stockholm – Technical report](https://www.folkhalsomyndigheten.se/contentassets/53c0dc391be54f5d959ead9131edb771/infection-fatality-rate-covid-19-stockholm-technical-report.pdf) (table B.1)
+1. [O’Driscoll et al.: Age-specific mortality and immunity patterns of SARS-CoV-2 infection in 45 countries](https://www.medrxiv.org/content/10.1101/2020.08.24.20180851v1) (table S4)
+1. [Ward et al.: Antibody prevalence for SARS-CoV-2 in England following first peak of the pandemic: REACT2 study in 100,000 adults](https://www.medrxiv.org/content/10.1101/2020.08.12.20173690v2),
+  specifically [Supplementary Appendix](https://www.medrxiv.org/highwire/filestream/93745/field_highwire_adjunct_files/0/2020.08.12.20173690-1.docx) (table S2a, column "Based on confirmed COVID-19 deaths")
+1. [Yang et al.: Estimating the infection fatality risk of COVID-19 in New York City during the spring 2020 pandemic wave](https://www.medrxiv.org/content/10.1101/2020.06.27.20141689v2) (table 1)
+1. [Molenberghs et al.: Belgian Covid-19 Mortality, Excess Deaths, Number of Deaths per Million, and Infection Fatality Rates](https://www.medrxiv.org/content/10.1101/2020.06.20.20136234v1) (table 6)
+
+The seasonal influenza IFR curves represent data from the US CDC on multiple seasons of flu:
+
+1. [2018-2019 influenza burden](https://www.cdc.gov/flu/about/burden/2018-2019.html)
+1. [2017-2018 influenza burden](https://www.cdc.gov/flu/about/burden/2017-2018.htm)
+1. [2016-2017 influenza burden](https://www.cdc.gov/flu/about/burden/2016-2017.html)
+1. [2015-2016 influenza burden](https://www.cdc.gov/flu/about/burden/2015-2016.html)
+1. [2014-2015 influenza burden](https://www.cdc.gov/flu/about/burden/2014-2015.html)
+
+However, these CDC statistics (eg. table 1 in "2018-2019 influenza burden",)
+only give the estimated number of symptomatic illnesses. We must account for
+asymptomatic ones as well to calculate the IFR.
+
+In [Key Facts About Influenza
+(Flu)](https://www.cdc.gov/flu/about/keyfacts.htm) the CDC implies 55-60% of
+illnesses are symptomatic:
+
+> «on average, about 8% of the U.S. population gets sick from flu each season,
+> with a range of between 3% and 11%, depending on the season.
+> [...]
+> The commonly cited 5% to 20% estimate was based on a study that examined both
+> symptomatic and asymptomatic influenza illness, which means it also looked at
+> people who may have had the flu but never knew it because they didn’t have
+> any symptoms. The 3% to 11% range is an estimate of the proportion of people
+> who have symptomatic flu illness.»
+
+Thus, the CDC acknowledges that 55-60% of illnesses are symptomatic (3/5 = 60%,
+and 11/20 = 55%.) We use the mid-point, 57.5%, to infer the number of asymptomatic
+illnesses:
+
+total_illnesses = symptomatic_illnesses / .575
 
 # Age-stratified IFR applied to countries' population pyramids
 
 The script [apply_ifr.py](apply_ifr.py) uses a handful of age-stratified
-IFR estimates and applies them to countries' population pyramids, to
+IFR estimates (from the chart above) and applies them to countries' population pyramids, to
 find their expected overall IFR assuming equal prevalence of the disease among all
 age groups.
 
 Of course, the real-world overall IFR will dependent on many factors: varying
 prevalence among age groups, underlying health conditions, access to
 healthcare, socioeconomic status, ethnicity, etc.
-
-IFR estimates come from:
-
-1. ENE-COVID Spanish serosurvey (calculated by `calc_ifr.py`, see next section)
-1. [US CDC](https://web.archive.org/web/20200911222029/https://www.cdc.gov/coronavirus/2019-ncov/hcp/planning-scenarios.html) (table 1)
-1. [Verity et al.: Estimates of the severity of coronavirus disease 2019: a model-based analysis](https://www.thelancet.com/journals/laninf/article/PIIS1473-3099%2820%2930243-7/fulltext) (table 1)
-1. [Levin et al.: Assessing the age specificity of infection fatality rates for COVID-19: systematic review, meta-analysis, and public policy implications](https://www.medrxiv.org/content/10.1101/2020.07.23.20160895v5) (table 3)
-1. [Gudbjartsson et al.: Humoral Immune Response to SARS-CoV-2 in Iceland](https://www.nejm.org/doi/full/10.1056/NEJMoa2026116),
-  [Supplementary Appendix 1](https://www.nejm.org/doi/suppl/10.1056/NEJMoa2026116/suppl_file/nejmoa2026116_appendix_1.pdf) (table S7)
-1. [O’Driscoll et al.: Age-specific mortality and immunity patterns of SARS-CoV-2 infection in 45 countries](https://www.medrxiv.org/content/10.1101/2020.08.24.20180851v1) (table S4)
 
 Data for the population pyramids comes from the
 [United Nations](https://population.un.org/wpp/Download/Standard/Population/),

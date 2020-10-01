@@ -12,10 +12,16 @@ This project studies the age-stratified infection fatality ratio (IFR) of COVID-
 ![Infection Fatality Ratio of COVID-19 vs. Seasonal Influenza](covid_vs_flu.png)
 
 The above chart compares the IFR of COVID-19 to the IFR of seasonal influenza. We
-find that COVID-19 is definitely significantly more fatal than seasonal influenza at all
-ages above 30 years. The source code to create this chart is
-[covid_vs_flu.py](covid_vs_flu.py). The COVID-19 IFR curves represent various
-estimates:
+find that COVID-19 is definitely significantly more fatal than influenza at all
+ages above 30 years. The source code producing this chart is
+[covid_vs_flu.py](covid_vs_flu.py).
+
+The vertical indicators represent the difference in fatality between COVID-19
+and influenza at various ages, from 30 to 80 years at 10-year intervals. The
+top/bottom of the indicators are anchored at the geometric means of the
+COVID-19/influenza IFR estimates.
+
+The COVID-19 IFR curves represent these estimates:
 
 1. ENE-COVID Spanish serosurvey (calculated by `calc_ifr.py`, see [this section](#calculating-the-age-stratified-ifr-of-covid-19-from-the-spanish-ene-covid-study))
 1. [US CDC COVID-19 Pandemic Planning Scenarios](https://web.archive.org/web/20200911222029/https://www.cdc.gov/coronavirus/2019-ncov/hcp/planning-scenarios.html) (table 1)

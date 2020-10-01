@@ -208,6 +208,16 @@ cdc_sympt = .575
 # Age-stratified IFR estimates for seasonal influenza
 ifrs_flu = [
 
+        # US CDC 2019-2020 influenza burden
+        # https://www.cdc.gov/flu/about/burden/2019-2020.html
+        ('US CDC 2019-2020', {
+            (0,4):              254/4_291_677 * 100 * cdc_sympt,
+            (5,17):             180/8_214_257 * 100 * cdc_sympt,
+            (18,49):            2_669/15_325_708 * 100 * cdc_sympt,
+            (50,64):            5_133/8_416_702 * 100 * cdc_sympt,
+            (65,maxage):        13_673/1_946_161 * 100 * cdc_sympt,
+        }),
+
         # US CDC 2018-2019 influenza burden
         # https://www.cdc.gov/flu/about/burden/2018-2019.html
         ('US CDC 2018-2019', {
@@ -354,7 +364,7 @@ def main():
     ax.xaxis.set_minor_locator(ticker.MultipleLocator(base=5))
     ax.xaxis.set_major_locator(ticker.MultipleLocator(base=10))
     ax.yaxis.set_major_formatter(ticker.FormatStrFormatter('%g'))
-    ax.text(75, .0016, 'Seasonal Influenza:')
+    ax.text(75, .0025, 'Seasonal Influenza:')
     handles, labels = fig.gca().get_legend_handles_labels()
     x = len(ifrs_flu)
     ax.legend(handles=handles[-x:], labels=labels[-x:], loc='lower right',

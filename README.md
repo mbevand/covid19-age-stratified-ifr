@@ -42,6 +42,7 @@ The COVID-19 IFR curves represent these estimates:
 
 The seasonal influenza IFR curves represent data from the US CDC on multiple seasons of flu:
 
+1. [2019-2020 influenza burden](https://www.cdc.gov/flu/about/burden/2019-2020.html)
 1. [2018-2019 influenza burden](https://www.cdc.gov/flu/about/burden/2018-2019.html)
 1. [2017-2018 influenza burden](https://www.cdc.gov/flu/about/burden/2017-2018.htm)
 1. [2016-2017 influenza burden](https://www.cdc.gov/flu/about/burden/2016-2017.html)

@@ -67,6 +67,22 @@ ifrs_covid = [
             (85,maxage): 22.3,
         }),
 
+        # Salje et al.: Estimating the burden of SARS-CoV-2 in France
+        # https://science.sciencemag.org/content/369/6500/208
+        # Supplementary Materials:
+        # https://science.sciencemag.org/content/sci/suppl/2020/05/12/science.abc3517.DC1/abc3517_Salje_SM_rev2.pdf
+        # (table S2)
+        ('Salje', {
+            (0,19):   0.001,
+            (20,29):  0.005,
+            (30,39):  0.02,
+            (40,49):  0.05,
+            (50,59):  0.2,
+            (60,69):  0.7,
+            (70,79):  1.9,
+            (80,maxage):  8.3,
+        }),
+
         # Perez-Saez et al.
         # https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(20)30584-3/fulltext
         ('Perez-Saez', {

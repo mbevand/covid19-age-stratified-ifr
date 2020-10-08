@@ -22,12 +22,15 @@ age_groups = [(0,4), (5,9), (10,14), (15,19), (20,24), (25,29), (30,34), (35,39)
 # age group 20-24 in France: pyramid['France'][(20,24)]
 pyramid = {}
 
+# For a description of cdc_sympt, see the same variable name defined in covid_vs_flu.py
+cdc_sympt = .575
+
 # Various age-stratified IFR estimates
 ifrs = [
 
         # Calculated from Spanish ENE-COVID study
         # (see calc_ifr.py)
-        ('ENE-COV', {
+        ('ENE-COVID', {
             (0,9):    0.003,
             (10,19):  0.004,
             (20,29):  0.015,
@@ -43,7 +46,7 @@ ifrs = [
         # US CDC estimate as of 10 Sep 2020
         # https://www.cdc.gov/coronavirus/2019-ncov/hcp/planning-scenarios.html
         # (table 1)
-        ('US_CDC', {
+        ('COVID: US CDC', {
             (0,19):   0.003,
             (20,49):  0.02,
             (50,69):  0.5,
@@ -53,7 +56,7 @@ ifrs = [
         # Verity et al.
         # https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(20)30243-7/fulltext
         # (table 1)
-        ('Verity', {
+        ('COVID: Verity', {
             (0,9):    0.00161,
             (10,19):  0.00695,
             (20,29):  0.0309,
@@ -68,7 +71,7 @@ ifrs = [
         # Levin et al.
         # https://www.medrxiv.org/content/10.1101/2020.07.23.20160895v5
         # (table 3)
-        ('Levin', {
+        ('COVID: Levin', {
             (0,34):   0.004,
             (35,44):  0.06,
             (45,54):  0.2,
@@ -78,38 +81,15 @@ ifrs = [
             (85,maxage): 22.3,
         }),
 
-        # Gudbjartsson et al., Humoral Immune Response to SARS-CoV-2 in Iceland
-        # https://www.nejm.org/doi/full/10.1056/NEJMoa2026116
-        # Supplementary Appendix 1
-        # https://www.nejm.org/doi/suppl/10.1056/NEJMoa2026116/suppl_file/nejmoa2026116_appendix_1.pdf
-        # (table S7)
-        ('Gudbj', {
-            (0,70):   0.1,
-            (71,80):  2.4,
-            (81,maxage): 11.2,
-        }),
-
-        # O’Driscoll et al., Age-specific mortality and immunity patterns of SARS-CoV-2 infection in 45 countries
-        # https://www.medrxiv.org/content/10.1101/2020.08.24.20180851v1
-        # (table S4)
-        ("O'Drisc", {
-            (0,4):   0.002,
-            (5,9):   0.000,
-            (10,14): 0.000,
-            (15,19): 0.002,
-            (20,24): 0.004,
-            (25,29): 0.009,
-            (30,34): 0.017,
-            (35,39): 0.029,
-            (40,44): 0.053,
-            (45,49): 0.086,
-            (50,54): 0.154,
-            (55,59): 0.241,
-            (60,64): 0.359,
-            (65,69): 0.642,
-            (70,74): 1.076,
-            (75,79): 2.276,
-            (80,maxage): 7.274,
+        # IFR for seasonal influenza
+        # US CDC 2019-2020 influenza burden
+        # https://www.cdc.gov/flu/about/burden/2019-2020.html
+        ('Flu: US CDC', {
+            (0,4):              254/4_291_677 * 100 * cdc_sympt,
+            (5,17):             180/8_214_257 * 100 * cdc_sympt,
+            (18,49):            2_669/15_325_708 * 100 * cdc_sympt,
+            (50,64):            5_133/8_416_702 * 100 * cdc_sympt,
+            (65,maxage):        13_673/1_946_161 * 100 * cdc_sympt,
         }),
 
 ]
@@ -171,7 +151,7 @@ def calc_overall_ifrs():
 def show_overall_ifrs(oifrs):
     def header():
         for i in ifrs:
-            print(f'| {i[0]:>7} ', end='')
+            print(f'| {i[0]:>13} ', end='')
         print('| Region |')
     # Each entry in the oifrs array is a tuple:
     # (<region_name>, <ifr_according_to_1st_estimate>, <ifr_according_to_2nd_estimate>, ...)
@@ -181,7 +161,7 @@ def show_overall_ifrs(oifrs):
     header()
     for region in oifrs:
         for i in region[1:]:
-            print(f'| {i:7.3f} ', end='')
+            print(f'| {i:13.3f} ', end='')
         print(f'| {region[0]} |')
     header()
 

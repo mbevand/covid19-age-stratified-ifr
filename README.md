@@ -321,10 +321,6 @@ IFR: Japan at 1.274-1.605% (excluding Levin et al.)
 The country with the youngest population is expected to have the lowest overall
 IFR: Uganda at 0.074-0.147%.
 
-The **IFR of COVID-19 is one order of magnitude (10×) higher than the seasonal flu**
-for all regions. For example, in the US the average flu IFR is 0.078%, compared to
-0.669-1.169% for COVID-19.
-
 The **overall IFR varies dramatically by more than 10-fold** between countries with a young
 population and those with an old population.
 
@@ -346,6 +342,10 @@ Our code, with the ENE-COVID Spanish serosurvey data from June 2020, accurately
 predicted an overall IFR of 0.669% in the United States, which is very close to
 [overall US CDC estimate of 0.65%](https://web.archive.org/web/20200712055258/https://www.cdc.gov/coronavirus/2019-ncov/hcp/planning-scenarios.html)
 published in July 2020.
+
+The **IFR of COVID-19 is one order of magnitude (10×) higher than the seasonal flu**
+for all regions. For example, in the US the average flu IFR is 0.078%, compared to
+0.669-1.169% for COVID-19.
 
 # Calculating the age-stratified IFR of COVID-19 from the Spanish ENE-COVID study
 

@@ -80,7 +80,7 @@ applies them to countries' population pyramids, to find their expected average
 IFR. The calculation assumes equal prevalence of the disease among all age groups.
 
 IFR estimates are a subset of the same sources as in `covid_vs_flu.py`. The flu
-IFR is from the last flu season, 2019-2020.
+IFR is from the US CDC (last flu season, 2019-2020.)
 
 The real-world overall IFR will, of course, dependent on many factors: varying
 prevalence among age groups, underlying health conditions, access to

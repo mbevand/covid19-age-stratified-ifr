@@ -1,4 +1,4 @@
-*Updated: 07 Oct 2020*
+*Updated: 21 Oct 2020*
 
 Author: Marc Bevand
 
@@ -349,7 +349,7 @@ for all regions. For example, in the US the average flu IFR is 0.078%, compared 
 
 # Calculating the age-stratified IFR of COVID-19 from the Spanish ENE-COVID study
 
-The largest serological prevalence survey of COVID-19 was conducted by Spain
+One of the largest serological prevalence surveys of COVID-19 was conducted by Spain
 during the second round of the ENE-COVID study that analyzed 63 564 samples between 18 May
 2020 and 01 June 2020. We used its [provisional results][sero] published on 03
 June to calculate the overall and age-stratified IFR of COVID-19 with the
@@ -374,8 +374,7 @@ The average IFR for Spain is **1.117%**. However the true IFR may be higher due
 to right-censoring, under-reporting of deaths, or low specificity of the serological test;
 or the true IFR may be lower due to low sensitivity of the serological test.
 
-The Spanish serological study remains the largest published study available to
-this day. The age-stratified IFR was calculated from three sources:
+The age-stratified IFR was calculated from three sources:
 
 1. Detailed *prevalence data for age brackets*, from the [serosurvey][sero] (table 1)
 1. *Total deaths* and *deaths per age bracket* from the [Ministry of Health's daily report for 29 May][daily] (table 2 and table 3)

@@ -358,7 +358,7 @@ def main():
     (fig, ax) = plt.subplots(dpi=300, figsize=(8,6))
     # plot ifrs_covid
     plot(ax, ifrs_covid, True)
-    ax.text(3, 35, 'COVID-19:')
+    ax.text(3, 45, 'COVID-19:')
     handles, labels = fig.gca().get_legend_handles_labels()
     first_legend = ax.legend(handles=handles, labels=labels, loc='upper left',
             frameon=False, fontsize='x-small', handlelength=5)

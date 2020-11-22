@@ -34,7 +34,7 @@ The COVID-19 IFR curves represent these estimates:
 1. [Gudbjartsson et al.: Humoral Immune Response to SARS-CoV-2 in Iceland](https://www.nejm.org/doi/full/10.1056/NEJMoa2026116),
   specifically [Supplementary Appendix 1](https://www.nejm.org/doi/suppl/10.1056/NEJMoa2026116/suppl_file/nejmoa2026116_appendix_1.pdf) (table S7)
 1. [PHAS - Public Health Agency of Sweden: The infection fatality rate of COVID-19 in Stockholm – Technical report](https://www.folkhalsomyndigheten.se/contentassets/53c0dc391be54f5d959ead9131edb771/infection-fatality-rate-covid-19-stockholm-technical-report.pdf) (table B.1)
-1. [O’Driscoll et al.: Age-specific mortality and immunity patterns of SARS-CoV-2 infection in 45 countries](https://www.medrxiv.org/content/10.1101/2020.08.24.20180851v1) (table S4)
+1. [O’Driscoll et al.: Age-specific mortality and immunity patterns of SARS-CoV-2](https://www.nature.com/articles/s41586-020-2918-0) (table S3)
 1. [Ward et al.: Antibody prevalence for SARS-CoV-2 in England following first peak of the pandemic: REACT2 study in 100,000 adults](https://www.medrxiv.org/content/10.1101/2020.08.12.20173690v2),
   specifically [Supplementary Appendix](https://www.medrxiv.org/highwire/filestream/93745/field_highwire_adjunct_files/0/2020.08.12.20173690-1.docx) (table S2a, column "Based on confirmed COVID-19 deaths")
 1. [Yang et al.: Estimating the infection fatality risk of COVID-19 in New York City during the spring 2020 pandemic wave](https://www.medrxiv.org/content/10.1101/2020.06.27.20141689v2) (table 1)

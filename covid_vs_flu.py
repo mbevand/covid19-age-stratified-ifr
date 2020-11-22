@@ -137,27 +137,29 @@ ifrs_covid = [
             (90,maxage):  16.21,
         }),
 
-        # O’Driscoll et al.: Age-specific mortality and immunity patterns of SARS-CoV-2 infection in 45 countries
-        # https://www.medrxiv.org/content/10.1101/2020.08.24.20180851v1
-        # (table S4)
+        # O’Driscoll et al.: Age-specific mortality and immunity patterns of SARS-CoV-2
+        # https://www.nature.com/articles/s41586-020-2918-0
+        # Supplementary information
+        # https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-020-2918-0/MediaObjects/41586_2020_2918_MOESM1_ESM.pdf
+        # (table S3)
         ('O’Driscoll', {
-            (0,4):   0.002,
-            (5,9):   0,
-            (10,14): 0,
-            (15,19): 0.002,
-            (20,24): 0.004,
-            (25,29): 0.009,
-            (30,34): 0.017,
-            (35,39): 0.029,
-            (40,44): 0.053,
-            (45,49): 0.086,
-            (50,54): 0.154,
-            (55,59): 0.241,
-            (60,64): 0.359,
-            (65,69): 0.642,
-            (70,74): 1.076,
-            (75,79): 2.276,
-            (80,maxage): 7.274,
+            (0,4):   0.003,
+            (5,9):   0.001,
+            (10,14): 0.001,
+            (15,19): 0.003,
+            (20,24): 0.006,
+            (25,29): 0.013,
+            (30,34): 0.024,
+            (35,39): 0.040,
+            (40,44): 0.075,
+            (45,49): 0.121,
+            (50,54): 0.207,
+            (55,59): 0.323,
+            (60,64): 0.456,
+            (65,69): 1.075,
+            (70,74): 1.674,
+            (75,79): 3.203,
+            (80,maxage): 8.292,
         }),
 
         # Ward et al.: Antibody prevalence for SARS-CoV-2 in England following first peak of the pandemic: REACT2 study in 100,000 adults
@@ -388,8 +390,8 @@ def main():
     fig.suptitle('Infection Fatality Ratio of COVID-19 vs. Seasonal Influenza')
     ax.text(0, -0.11,
     'Source: https://github.com/mbevand/covid19-age-stratified-ifr\n'
-    'Note: the vertical lines on two COVID-19 IFR curves (Poletti and O’Driscoll) are caused by the IFR being\n'
-    'estimated to be zero by Poletti for age groups 0-19 and 20-49, and by O’Driscoll for 5-9 and 10-14.\n',
+    'Note: the vertical lines on one COVID-19 IFR curve (Poletti) are caused by the IFR being\n'
+    'estimated to be zero for age groups 0-19 and 20-49.\n',
             transform=ax.transAxes, fontsize='small', verticalalignment='top',
     )
     ax.text(1, 1, 'Created by: Marc Bevand — @zorinaq',

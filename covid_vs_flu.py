@@ -360,7 +360,7 @@ def main():
     (fig, ax) = plt.subplots(dpi=300, figsize=(8,6))
     # plot ifrs_covid
     plot(ax, ifrs_covid, True)
-    ax.text(3, 45, 'COVID-19:')
+    ax.text(.03, .99, 'COVID-19:', transform=ax.transAxes)
     handles, labels = fig.gca().get_legend_handles_labels()
     first_legend = ax.legend(handles=handles, labels=labels, loc='upper left',
             frameon=False, fontsize='x-small', handlelength=5)
@@ -382,7 +382,7 @@ def main():
     ax.xaxis.set_minor_locator(ticker.MultipleLocator(base=5))
     ax.xaxis.set_major_locator(ticker.MultipleLocator(base=10))
     ax.yaxis.set_major_formatter(ticker.FormatStrFormatter('%g'))
-    ax.text(75, .0025, 'Seasonal Influenza:')
+    ax.text(.75, .21, 'Seasonal Influenza:', transform=ax.transAxes)
     handles, labels = fig.gca().get_legend_handles_labels()
     x = len(ifrs_flu)
     ax.legend(handles=handles[-x:], labels=labels[-x:], loc='lower right',

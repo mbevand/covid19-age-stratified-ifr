@@ -203,25 +203,23 @@ ifrs_covid = [
 # https://www.cdc.gov/flu/about/burden/2018-2019.html), only symptomatic
 # illnesses are estimated. We must account for asymptomatic ones as well.
 #
-# In https://www.cdc.gov/flu/about/keyfacts.htm the CDC implies 55-60% of
-# illnesses are symptomatic:
-#
-# «on average, about 8% of the U.S. population gets sick from flu each season,
-# with a range of between 3% and 11%, depending on the season.
-# [...]
-# The commonly cited 5% to 20% estimate was based on a study that examined both
-# symptomatic and asymptomatic influenza illness, which means it also looked at
-# people who may have had the flu but never knew it because they didn’t have
-# any symptoms. The 3% to 11% range is an estimate of the proportion of people
-# who have symptomatic flu illness.»
-#
-# The CDC thus acknowledges that 55-60% of illnesses are symptomatic:
-# 3/5 = 60%
-# 11/20 = 55%
-#
-# We use the mid-point, 57.5%, as an estimate to account for both symptomatic
-# and asymptomatic illnesses.
-cdc_sympt = .575
+# Not all influenza infections have symptoms, the infected people may not be aware
+# they are infected. The fraction of cases without symptoms but a confirmation (serologic)
+# of antibodies is called the asymptomatic fraction. 
+# The asymptomatic fraction of influenza cases has been studied in recent years in various 
+# journal articles.
+# The most recent study was part of UK FluWatch study with results published 
+# in the Lancet - showing the asymptomatic fraction was 77%. 
+# https://www.thelancet.com/journals/lanres/article/PIIS2213-2600(14)70034-7/fulltext
+# Another study published at :
+# https://journals.lww.com/epidem/Fulltext/2010/09000/Estimating_Pathogen_specific_Asymptomatic_Ratios.28.aspx
+# determines for H1N1 subtype 75%, and H3N2 subtype 65% asymptomatic fraction.
+# Finally a meta study is available here :
+# https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4586318/ from which a range of 65-85% 
+# asymptomatic fraction is determined.
+# We use an estimate of 67% asymptomatic fraction - or 33% symptomatic.
+
+cdc_sympt = .33
 
 # Age-stratified IFR estimates for seasonal influenza
 ifrs_flu = [

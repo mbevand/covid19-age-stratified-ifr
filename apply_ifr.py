@@ -23,7 +23,7 @@ age_groups = [(0,4), (5,9), (10,14), (15,19), (20,24), (25,29), (30,34), (35,39)
 pyramid = {}
 
 # For a description of cdc_sympt, see the same variable name defined in covid_vs_flu.py
-cdc_sympt = .575
+cdc_sympt = .33
 
 # Various age-stratified IFR estimates
 ifrs = [

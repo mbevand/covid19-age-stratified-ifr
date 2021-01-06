@@ -348,7 +348,7 @@ def plot_comp(ax):
         y1 = mean_ifr(age, ifrs_flu)
         y2 = mean_ifr(age, ifrs_covid)
         assert not np.isnan(y1) and not np.isnan(y2)
-        ax.annotate(s='', xy=(age, y1), xytext=(age, y2),
+        ax.annotate('', xy=(age, y1), xytext=(age, y2),
                 arrowprops=dict(arrowstyle='|-|', shrinkA=0, shrinkB=0,
                     alpha=.7))
         ax.text(age, y1 * .6, f'{y2/y1:.1f}×', ha='center', va='top',

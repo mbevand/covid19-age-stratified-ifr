@@ -55,7 +55,7 @@ ifrs_covid = [
         }),
 
         # Levin et al.
-        # https://www.medrxiv.org/content/10.1101/2020.07.23.20160895v7
+        # https://link.springer.com/article/10.1007/s10654-020-00698-1
         # (table 3)
         ('Levin', {
             (0,34):   0.004,

@@ -163,15 +163,13 @@ ifrs_covid = [
         }),
 
         # Ward et al.: Antibody prevalence for SARS-CoV-2 in England following first peak of the pandemic: REACT2 study in 100,000 adults
-        # https://www.medrxiv.org/content/10.1101/2020.08.12.20173690v2
-        # Supplementary Appendix
-        # https://www.medrxiv.org/highwire/filestream/93745/field_highwire_adjunct_files/0/2020.08.12.20173690-1.docx
-        # (table S2a, column "Based on confirmed COVID-19 deaths")
+        # https://www.nature.com/articles/s41467-021-21237-w
+        # (table 2)
         ('REACT2', {
             (15,44):  0.03,
             (45,64):  0.52,
-            (65,74):  3.87,
-            (75,maxage): 18.71,
+            (65,74):  3.13,
+            (75,maxage): 11.64,
         }),
 
         # Yang et al.: Estimating the infection fatality risk of COVID-19 in New York City during the spring 2020 pandemic wave

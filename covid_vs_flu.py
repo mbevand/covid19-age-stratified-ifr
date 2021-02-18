@@ -349,7 +349,7 @@ def plot_comp(ax):
         ax.annotate('', xy=(age, y1), xytext=(age, y2),
                 arrowprops=dict(arrowstyle='|-|', shrinkA=0, shrinkB=0,
                     alpha=.7))
-        ax.text(age, y1 * .6, f'{y2/y1:.1f}×', ha='center', va='top',
+        ax.text(age, y1 * .6, f'{y2/y1:.0f}×', ha='center', va='top',
                 weight='bold', size=12, alpha=.7)
 
 def main():

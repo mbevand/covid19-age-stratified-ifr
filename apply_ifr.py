@@ -81,6 +81,31 @@ ifrs = [
             (85,maxage): 28.3,
         }),
 
+        # Brazeau et al.
+        # https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-34-ifr/
+        # (table 2, column "IFR (%) with Seroreversion")
+        ('COVID: Brazeau', {
+            (0,4):    0.00,
+            (5,9):    0.01,
+            (10,14):  0.01,
+            (15,19):  0.02,
+            (20,24):  0.02,
+            (25,29):  0.04,
+            (30,34):  0.06,
+            (35,39):  0.09,
+            (40,44):  0.15,
+            (45,49):  0.23,
+            (50,54):  0.36,
+            (55,59):  0.57,
+            (60,64):  0.89,
+            (65,69):  1.39,
+            (70,74):  2.17,
+            (75,79):  3.39,
+            (80,84):  5.30,
+            (85,89):  8.28,
+            (90,maxage): 16.19,
+        }),
+
         # IFR for seasonal influenza
         # US CDC 2019-2020 influenza burden
         # https://www.cdc.gov/flu/about/burden/2019-2020.html

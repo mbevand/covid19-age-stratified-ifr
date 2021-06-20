@@ -195,6 +195,31 @@ ifrs_covid = [
             (85,maxage): 11.77,
         }),
 
+        # Brazeau et al.
+        # https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-34-ifr/
+        # (table 2, column "IFR (%) with Seroreversion")
+        ('Brazeau', {
+            (0,4):    0.00,
+            (5,9):    0.01,
+            (10,14):  0.01,
+            (15,19):  0.02,
+            (20,24):  0.02,
+            (25,29):  0.04,
+            (30,34):  0.06,
+            (35,39):  0.09,
+            (40,44):  0.15,
+            (45,49):  0.23,
+            (50,54):  0.36,
+            (55,59):  0.57,
+            (60,64):  0.89,
+            (65,69):  1.39,
+            (70,74):  2.17,
+            (75,79):  3.39,
+            (80,84):  5.30,
+            (85,89):  8.28,
+            (90,maxage): 16.19,
+        }),
+
 ]
 
 # In the CDC influenza burden pages (eg. table 1 in
@@ -386,8 +411,8 @@ def main():
     fig.suptitle('Infection Fatality Ratio of COVID-19 vs. Seasonal Influenza')
     ax.text(0, -0.11,
     'Source: https://github.com/mbevand/covid19-age-stratified-ifr\n'
-    'Note: the vertical lines on one COVID-19 IFR curve (Poletti) are caused by the IFR being\n'
-    'estimated to be zero for age groups 0-19 and 20-49.\n',
+    'Note: the vertical lines on some COVID-19 IFR curves (Poletti and Brazeau) are caused by the IFR being\n'
+    'estimated to be zero for some age groups (respectively 0-49 and 0-4.)\n',
             transform=ax.transAxes, fontsize='small', verticalalignment='top',
     )
     ax.text(1, 1, 'Created by: Marc Bevand — @zorinaq',

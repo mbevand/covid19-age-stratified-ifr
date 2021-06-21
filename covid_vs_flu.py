@@ -29,14 +29,14 @@ ifrs_covid = [
             (90,maxage): 12.497,
         }),
 
-        # US CDC estimate as of 10 Sep 2020
+        # US CDC estimate as of 19 Mar 2021
         # https://www.cdc.gov/coronavirus/2019-ncov/hcp/planning-scenarios.html
         # (table 1)
         ('US CDC', {
-            (0,19):   0.003,
-            (20,49):  0.02,
-            (50,69):  0.5,
-            (70,maxage): 5.4,
+            (0,17):   0.002,
+            (18,49):  0.05,
+            (50,64):  0.6,
+            (65,maxage): 9.0,
         }),
 
         # Verity et al.
